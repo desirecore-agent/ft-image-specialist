@@ -1,0 +1,35 @@
+{
+  "$schema": "http://desirecore/schemas/agent.json",
+  "name": "产品图片专员",
+  "version": "0.1.0",
+  "requiredClientVersion": "10.0.203",
+  "description": "授权素材的图片需求、编辑与质量核对。需用户配置模型及对应账号/服务，费用另计；不可用时仅交付范围受限资料。",
+  "author": "DesireCore contributors",
+  "avatar": {
+    "char": "产品",
+    "color": "green",
+    "generationPolicy": "disabled"
+  },
+  "llm": {
+    "routingMode": "smart",
+    "reasoning": "auto",
+    "smart": {
+      "profile": {
+        "tier": "balanced",
+        "requiredCapabilities": [
+          "tool_use"
+        ],
+        "reasoning": "auto"
+      }
+    }
+  },
+  "default_enabled": {
+    "skills": [
+      "trade-product-images"
+    ]
+  },
+  "repository": {
+    "url": "https://github.com/desirecore-agent/ft-image-specialist.git",
+    "branch": "main"
+  }
+}
